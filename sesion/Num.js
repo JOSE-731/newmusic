@@ -1,7 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Text, View, StyleSheet, Image, TextInput, TouchableHighlight } from 'react-native';
+import firebase from '../database/firebase'
 
 export default function RegistrateNum({ navigation }) {
+
+    const [state, setState] = useState({
+        email:''
+    })
+
+    const saveNewUser =  async () =>{
+        console.log(state)
+       await firebase.db.collection('email').add({
+            email:state.email,
+        })
+
+        state('')
+    }
+
     return (
         <View>
             <View>
@@ -13,12 +28,13 @@ export default function RegistrateNum({ navigation }) {
                     style={Estilos.input}
                     placeholder="Ingrese su numero de telefono"
                     keyboardType="numeric"
+                    onChangeText={(value) => setState({...state, email:value})}
                 />
             </View>
 
             <View>
                 <TouchableHighlight style={Estilos.btnRegistrate}>
-                    <Text style={Estilos.TitlebtnRegistrate} onPress={() => navigation.navigate('Digito')}>Ingresar</Text>
+                    <Text style={Estilos.TitlebtnRegistrate} onPress={() => saveNewUser()}>Ingresar</Text>
                 </TouchableHighlight>
             </View>
         </View>

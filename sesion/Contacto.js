@@ -59,13 +59,13 @@ export default function Contacto({ navigation }) {
                 <TextInput
                     style={Estilos.inputTres}
                     keyboardType="ascii-capable"
-                    onChangeText={(value) => setState({...state, sex:value})}
+                    onChangeText={(value) => setState({...state, mensaje:value})}
                 />
             </View>
 
             <View>
                 <TouchableHighlight style={Estilos.btnRegistrate} onPress={() => saveNewUser()}>
-                    <Text style={Estilos.TitlebtnRegistrate} >Registrate</Text>
+                    <Text style={Estilos.TitlebtnRegistrate}>Guardar</Text>
                 </TouchableHighlight>
             </View>
 
