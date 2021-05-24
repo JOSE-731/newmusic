@@ -14,10 +14,11 @@ export default function RegistrateNum({ navigation }) {
             email:state.email,
         })
 
-        state('')
+    
     }
 
     return (
+        
         <View>
             <View>
                 <Image style={Estilos.imagen} source={require('../imagenes/imagenIndex.jpg')} />

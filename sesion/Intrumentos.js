@@ -61,6 +61,21 @@ export default function Intrumentos({ navigation }) {
                 <Text style={Estilos.title}></Text>
                 <Text></Text>
             </View>
+            <View>
+                <Text style={Estilos.titleHijo4}>Salsa</Text>
+                <Text> La música salsa es una mezcla de los sonidos africanos y caribeños. Estos son sonidos como el son, mambo, bomba y plena. Salsa es un término que describe varios estilos rítmicos e instrumentales que se originaron no solo en Puerto Rico, pero también en Cuba, Republica Dominicana, y sí, Los Estados Unidos.</Text>
+                <Image style={Estilos.imagen} source={require('../imagenes/salsa.jpg')} />
+            </View>
+            <View>
+                <Text style={Estilos.titleHijo4}>Merengue</Text>
+                <Text> El merengue es un baile tropical alegre y fácil, que suele tener muchos fans entre la gente joven de baile de salón. Por su ritmo básico tan sencillo, un paso por tiempo, es el baile ideal para aprender el movimineto de caderas caribeño.</Text>
+                <Image style={Estilos.imagen} source={require('../imagenes/merengue.jpg')} />
+            </View>
+            <View>
+                <Text style={Estilos.titleHijo4}>Folclorica</Text>
+                <Text> El folclor colombiano es una manifestación cultural que comprende la unión y fusión de muchos ritmos, culturas y tendencias. ... Dentro de los principales ritmos musicales de Colombia sobresalen la Cumbia, Porro, Bambuco, Vallenato, Mapalé, Rajaleña, Guabina, Joropo, Currulao, San Juanero, Torbellino y la Champeta.</Text>
+                <Image style={Estilos.imagen} source={require('../imagenes/folclor.jpg')} />
+            </View>
         </ScrollView>
 
     );
